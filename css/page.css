@@ -1,0 +1,87 @@
+@font-face {
+  font-family: myFirstFont;
+  src:  url("../fonts/庞门正道标题体.ttf"),
+        url("../fonts/庞门正道标题体.eot"); /* IE9 */
+}
+
+.page4 .page-inner{
+  background: white;
+  box-sizing: border-box;
+  padding-top: 36px;
+  position: relative;
+}
+.page4 .page-inner .return{
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+.page4 .page-inner .title{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.page4 .page-inner .title p{
+  margin-top: 9px;
+}
+.page4 .page-inner .title p{
+  font-family: myFirstFont;
+  font-size: 44px;
+}
+.page4 .page-inner .seize{
+  margin: 13px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.page4 .page-inner .seize img:nth-of-type(1){
+  position: relative;
+  z-index: 9;
+}
+.page4 .page-inner .seize img:nth-of-type(2){
+  position: absolute;
+  top: -172px
+}
+.page4 .page-inner .seize img:nth-of-type(3){
+  position: absolute;
+  bottom: 8px;
+  z-index: 99;
+}
+
+/* 中奖名单 */
+.scrollbox {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
+  z-index: 99;
+}
+#scrollDiv {
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+#scrollDiv ul{
+  /* width: 72%; */
+  height: 90px;
+  padding: 0 13px;
+}
+#scrollDiv li {
+  font-size: 28px;
+  font-weight: bold;
+  height: 90px;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: bottom;
+  zoom: 1;
+}
+
+.box_bg{
+  position: absolute;
+  right: 0;
+  bottom: -81px;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script src="js/viewport.js"></script>
+    <link rel="stylesheet" href="css/gx-animate.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/jq_scroll.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#scrollDiv").Scroll({
+          line: 1,
+          speed: 500,
+          timer: 3000,
+          up: "but_up",
+          down: "but_down"
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <!-- loading -->
+    <div class="loading">
+      <div class="loading-text">
+        <!-- 	<div class="load-item">
+				<img src="images/img4.png">
+			</div> -->
+        <p class="load-tet">加载0%</p>
+      </div>
+    </div>
+    <div class="wrap page-wrap">
+      <div class="page page1" data-lock-next="true" data-lock-prev="true">
+        <div class="page-inner"></div>
+      </div>
+      <div class="page page2" data-lock-next="true" data-lock-prev="true">
+        <div class="page-inner"></div>
+      </div>
+      <div class="page page3" data-lock-next="true" data-lock-prev="true">
+        <div class="page-inner"></div>
+      </div>
+      <!-- 结果页 start -->
+      <div class="page page4" data-lock-next="true" data-lock-prev="true">
+        <div class="page-inner">
+
+					<!-- 返回按钮 start -->
+          <div class="return">
+            <img src="images/return.png" alt="" srcset="" />
+					</div>
+					<!-- 返回按钮 end -->
+
+          <!-- 标题 start -->
+          <div class="title">
+            <img src="images/title.png" alt="" srcset="" />
+            <p>看准时机，按下按钮，抓取好礼</p>
+          </div>
+          <!-- 标题 end -->
+
+          <!-- 扭蛋机 start -->
+          <div class="seize">
+            <img src="images/bg.png" alt="" srcset="" />
+            <img src="images/claw.png" alt="" srcset="" class="claw" />
+            <img src="images/go.png" alt="" srcset="" class="go" />
+          </div>
+          <!-- 扭蛋机 end -->
+
+          <!-- 中奖名单 start -->
+          <div class="scrollbox">
+            <div id="scrollDiv">
+              <img src="images/inform.png" alt="" srcset="" />
+              <ul>
+                <li>
+                  张** 136****2525 获得三折伞一把
+                </li>
+                <li>
+                  张** 136****2525 获得保温杯一个
+                </li>
+                <li>
+                  张** 136****2525 获得华为Mate30一份
+                </li>
+                <li>
+                  张** 136****2525 获得500元油卡一张
+                </li>
+                <li>
+                  张** 136****2525 获得100元油卡一张
+                </li>
+              </ul>
+            </div>
+          </div>
+					<!-- 中奖名单 end -->
+					
+					<!-- bg start -->
+          <div class="box_bg">
+            <img src="images/catbg.png" alt="" srcset="" />
+					</div>
+					<!-- bg end -->
+					
+        </div>
+      </div>
+      <!-- 结果页 end -->
+    </div>
+    <div class="tk tk-load tk-main" id="share-model"></div>
+
+    <!-- 弹框 -->
+    <div class="el-model">
+      <div class="el-contaoner zoomIn">
+        <!-- <div class="el-header">提示</div> -->
+        <div class="el-content">
+          <div class="el_box">
+            <div class="el_title">
+              恭喜你获得
+              <!-- 很遗憾 -->
+            </div>
+            <div class="el_result">
+              <img src="images/prize1.png" alt="" srcset="" />
+              <!-- 您暂时与好运错过啦~ -->
+              <!-- 邀请好友来官微认证 -->
+              <!-- <p>可获得更多游戏机会!</p> -->
+            </div>
+            <div class="el_text">
+              保温杯
+              <!-- 华为Mate30一份 -->
+              <!-- 500元油卡 -->
+              <!-- 100元油卡 -->
+              <!-- 广汽本田定制折伞 -->
+            </div>
+          </div>
+          <div class="el-footer clearfix">
+            <div class="el-button">
+              <p>领取奖品</p>
+              <!-- <p>再玩一次</p> -->
+              <!-- <p>获取更多游戏机会</p> -->
+              <!-- <p>我知道了</p> -->
+            </div>
+          </div>
+          <div class="el-success">
+            <img src="images/close.png" alt="" srcset="" />
+          </div>
+        </div>
+        <!-- <div class="el-footer clearfix">
+          <div class="el-button el-success">确定</div>
+        </div> -->
+      </div>
+    </div>
+    <!-- <script src="js/jquery-1.7.2.min.js"></script> -->
+    <script src="js/PageSlider.js"></script>
+    <script src="js/index.js?888"></script>
+    <script src="js/claw.js?888"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("body").height($("body")[0].clientHeight)
+      })
+
+      if (/Android [4-6]/.test(navigator.appVersion)) {
+        window.addEventListener("resize", function() {
+          if (
+            document.activeElement.tagName == "INPUT" ||
+            document.activeElement.tagName == "TEXTAREA"
+          ) {
+            window.setTimeout(function() {
+              document.activeElement.scrollIntoViewIfNeeded()
+            }, 0)
+          }
+        })
+      }
+      $("input,select,textarea").blur(function() {
+        setTimeout(function() {
+          window.scrollTo(0, 0)
+        }, 100)
+      })
+      document.body.addEventListener(
+        "touchmove",
+        function(e) {
+          e.preventDefault()
+        },
+        { passive: false }
+      )
+    </script>
+  </body>
+</html>
