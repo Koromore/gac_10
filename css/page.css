@@ -11,6 +11,7 @@
   position: relative;
 }
 .page4 .page-inner .return{
+  display: block;
   position: absolute;
   top: 32px;
   left: 0;
@@ -23,8 +24,6 @@
 }
 .page4 .page-inner .title p{
   margin-top: 9px;
-}
-.page4 .page-inner .title p{
   font-family: myFirstFont;
   font-size: 44px;
 }
@@ -47,30 +46,30 @@
 }
 .page4 .page-inner .seize img:nth-of-type(3){
   position: absolute;
-  bottom: 8px;
+  bottom: 9px;
   z-index: 99;
 }
 
 /* 中奖名单 */
-.scrollbox {
+.page4 .page-inner .scrollbox {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
   padding: 10px;
   z-index: 99;
 }
-#scrollDiv {
+.page4 .page-inner #scrollDiv {
   height: 36px;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
-#scrollDiv ul{
+.page4 .page-inner #scrollDiv ul{
   /* width: 72%; */
   height: 90px;
   padding: 0 13px;
 }
-#scrollDiv li {
+.page4 .page-inner #scrollDiv li {
   font-size: 28px;
   font-weight: bold;
   height: 90px;
@@ -80,8 +79,90 @@
   zoom: 1;
 }
 
-.box_bg{
+.page4 .page-inner .box_bg{
   position: absolute;
   right: 0;
   bottom: -81px;
+}
+
+.el-button a{
+  display: block;
+  color: white;
+}
+
+.page5 .page-inner .return{
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+.page5 .page-inner .client{
+  width: 100%;
+  height: 100%;
+  background: #fff url('../images/client_bg.jpg') center center no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.page5 .page-inner .client .content{
+  width: 100%;
+  height: 49%;
+  box-sizing: border-box;
+  padding-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.page5 .page-inner .client .content>p{
+  font-size: 48px;
+  position: absolute;
+  top: -240px;
+}
+.page5 .page-inner .client .content .form{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.page5 .page-inner .client .content .form>p{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.page5 .page-inner .client .content .form .input{
+  width: 512px;
+  height: 74px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  background: #fff;
+  border-radius: 37px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 27px;
+}
+.page5 .page-inner .client .content .form .input input{
+  border: 0;
+  border-radius: 36px;
+  color: black;
+  width: 80%;
+  height: 72px;
+  font-size: 27px;
+}
+.page5 .page-inner .client .content .form .put_but{
+  width: 358px;
+  height: 166px;
+  background: url('../images/but_bg.png') 0 0 no-repeat;
+  font-family: myFirstFont;
+  font-size: 50px;
+  color: white;
+  line-height: 166px;
+  text-align: center;
 }

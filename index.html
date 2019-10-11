@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/page.css" />
     <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/claw.js?888"></script>
     <script src="js/jq_scroll.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function() {
@@ -44,12 +45,11 @@
       <!-- 结果页 start -->
       <div class="page page4" data-lock-next="true" data-lock-prev="true">
         <div class="page-inner">
-
-					<!-- 返回按钮 start -->
-          <div class="return">
+          <!-- 返回按钮 start -->
+          <a href="javascript:;" class="return">
             <img src="images/return.png" alt="" srcset="" />
-					</div>
-					<!-- 返回按钮 end -->
+          </a>
+          <!-- 返回按钮 end -->
 
           <!-- 标题 start -->
           <div class="title">
@@ -71,40 +71,71 @@
             <div id="scrollDiv">
               <img src="images/inform.png" alt="" srcset="" />
               <ul>
-                <li>
-                  张** 136****2525 获得三折伞一把
-                </li>
-                <li>
-                  张** 136****2525 获得保温杯一个
-                </li>
-                <li>
-                  张** 136****2525 获得华为Mate30一份
-                </li>
-                <li>
-                  张** 136****2525 获得500元油卡一张
-                </li>
-                <li>
-                  张** 136****2525 获得100元油卡一张
-                </li>
+                <li></li>
               </ul>
             </div>
           </div>
-					<!-- 中奖名单 end -->
-					
-					<!-- bg start -->
+          <!-- 中奖名单 end -->
+
+          <!-- bg start -->
           <div class="box_bg">
             <img src="images/catbg.png" alt="" srcset="" />
-					</div>
-					<!-- bg end -->
-					
+          </div>
+          <!-- bg end -->
         </div>
       </div>
       <!-- 结果页 end -->
+
+      <!-- page5 start -->
+      <div class="page page5" data-lock-next="true" data-lock-prev="true">
+        <div class="page-inner">
+          <div class="page-inner">
+            <div class="client">
+              <!-- 返回按钮 start -->
+              <a href="client.html" class="return">
+                <img src="images/return.png" alt="" srcset="" />
+              </a>
+              <!-- 返回按钮 end -->
+
+              <div class="content">
+                <p>留咨信息</p>
+                <form
+                  class="form"
+                  report-submit="false"
+                  bindsubmit=""
+                  bindreset=""
+                >
+                  <div class="input">
+                    <p>姓名:</p>
+                    <input type="text" />
+                  </div>
+                  <div class="input">
+                    <p>电话:</p>
+                    <input type="number" />
+                  </div>
+                  <div class="input">
+                    <p>地址:</p>
+                    <input type="text" />
+                  </div>
+                  <p>
+                    ※ 请务必保证信息的真实有效性<br />
+                    确保奖品的准时发放。
+                  </p>
+                  <div class="put_but">
+                    确认提交
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- page5 end -->
     </div>
     <div class="tk tk-load tk-main" id="share-model"></div>
 
-    <!-- 弹框 -->
-    <div class="el-model">
+    <!-- 弹框start -->
+    <div class="el-model el-model_page4">
       <div class="el-contaoner zoomIn">
         <!-- <div class="el-header">提示</div> -->
         <div class="el-content">
@@ -129,10 +160,10 @@
           </div>
           <div class="el-footer clearfix">
             <div class="el-button">
-              <p>领取奖品</p>
-              <!-- <p>再玩一次</p> -->
-              <!-- <p>获取更多游戏机会</p> -->
-              <!-- <p>我知道了</p> -->
+              <a href="javascript:;">领取奖品</a>
+              <!-- <a href="javascript:;">再玩一次</a> -->
+              <!-- <a href="javascript:;">获取更多游戏机会</a> -->
+              <!-- <a href="javascript:;">我知道了</a> -->
             </div>
           </div>
           <div class="el-success">
@@ -144,10 +175,41 @@
         </div> -->
       </div>
     </div>
+    <!-- 弹框end -->
+
+    <!-- 弹框start -->
+    <div class="el-model el-model_page5">
+      <div class="el-contaoner zoomIn">
+        <div class="el-content">
+          <div class="el_box">
+            <div class="el_title">
+              信息提交成功
+            </div>
+            <div class="el_result">
+              奖品将在活动结束后
+              <span style="color: #fff601;">10个工作日内</span>
+              邮寄
+            </div>
+            <div class="el_text">
+              请耐心等候哟~
+            </div>
+          </div>
+          <div class="el-footer clearfix">
+            <div class="el-button">
+              <a href="javascript:;">确定</a>
+            </div>
+          </div>
+          <div class="el-success">
+            <img src="images/close.png" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 弹框end -->
+
     <!-- <script src="js/jquery-1.7.2.min.js"></script> -->
     <script src="js/PageSlider.js"></script>
     <script src="js/index.js?888"></script>
-    <script src="js/claw.js?888"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("body").height($("body")[0].clientHeight)

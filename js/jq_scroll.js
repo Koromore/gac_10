@@ -6,8 +6,6 @@ jQ向上滚动带上下翻页按钮
 		Scroll: function (opt, callback) {
 			//参数初始化
 			if (!opt) var opt = {};
-			var _btnUp = $("#" + opt.up);//Shawphy:向上按钮
-			var _btnDown = $("#" + opt.down);//Shawphy:向下按钮
 			var timerID;
 			var _this = this.eq(0).find("ul:first");
 			var lineH = _this.find("li:first").height(), //获取行高
@@ -18,7 +16,6 @@ jQ向上滚动带上下翻页按钮
 			var upHeight = 0 - line * lineH;
 			//滚动函数
 			var scrollUp = function () {
-				_btnUp.unbind("click", scrollUp); //Shawphy:取消向上按钮的函数绑定
 				_this.animate({
 					marginTop: upHeight
 				}, speed, function () {
@@ -26,21 +23,6 @@ jQ向上滚动带上下翻页按钮
 						_this.find("li:first").appendTo(_this);
 					}
 					_this.css({ marginTop: 0 });
-					_btnUp.bind("click", scrollUp); //Shawphy:绑定向上按钮的点击事件
-				});
-
-			}
-			//Shawphy:向下翻页函数
-			var scrollDown = function () {
-				_btnDown.unbind("click", scrollDown);
-				for (i = 1; i <= line; i++) {
-					_this.find("li:last").show().prependTo(_this);
-				}
-				_this.css({ marginTop: upHeight });
-				_this.animate({
-					marginTop: 0
-				}, speed, function () {
-					_btnDown.bind("click", scrollDown);
 				});
 			}
 			// Shawphy:自动播放
@@ -52,9 +34,6 @@ jQ向上滚动带上下翻页按钮
 			};
 			//鼠标事件绑定
 			_this.hover(autoStop, autoPlay).mouseout();
-			_btnUp.css("cursor", "pointer").click(scrollUp).hover(autoStop, autoPlay);//Shawphy:向上向下鼠标事件绑定
-			_btnDown.css("cursor", "pointer").click(scrollDown).hover(autoStop, autoPlay);
-
 		}
 	})
 })(jQuery);
